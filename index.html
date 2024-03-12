@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <meta name="title" content="Take a Spot" />
+    <meta name="description" content="Register in the upcoming hackathon organized by gomycode and det" />
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://silicon-valley-hackathon.netlify.app" />
+    <meta property="og:title" content="Take a Spot" />
+    <meta property="og:description" content="Register in the upcoming hackathon organized by gomycode and det" />
+    <meta property="og:image" content="https://i.postimg.cc/Kv6Twfc5/preview.jpg" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="https://i.postimg.cc/Kv6Twfc5/preview.jpg" />
+    <meta property="twitter:url" content="https://silicon-valley-hackathon.netlify.app" />
+    <meta property="twitter:title" content="Take a Spot" />
+    <meta property="twitter:description" content="Register in the upcoming hackathon organized by gomycode and det" />
+    <meta property="twitter:image" content="https://i.postimg.cc/Kv6Twfc5/preview.jpg" />
+
+    <!-- Bootstrap Library -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://unpkg.com/basscss@7.1.1/css/basscss.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #E50D36;
+            background-image: url(bg.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-y: center;
+            background-position-x: center;
+        }
+        .container {
+            top: 50px;
+            display: block;
+            align-items: center;
+            border-radius: 25px;
+            border-top-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            padding: 5%;
+            max-width: 700px;
+            position: relative;
+            background-color: rgba(255, 0, 0, 0.514);
+            color: white;
+            .mb-4{
+                text-align: center;
+                font-family: fantasy;
+                text-shadow: #E50D36 ;
+            }
+        }
+        p{
+            text-align: center;
+            background-color: #E50D36;
+            font-size: larger;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        @media only screen and (max-width: 600px){
+            body{
+                background-size: 80%;
+                padding-bottom: 20px;
+                background-position-y: top;
+                background-position-x: center;
+                height: 100vh
+            }
+            .container{
+                background-color: rgba(255, 0, 0, 0.589);
+                color: white;
+                .mb-4{
+                    color: black;
+                    background-color: #ffffff;
+                    padding: 5px;
+                    border-radius: 20px;
+                    text-align: center;
+                    font-family: fantasy;
+                }
+            }
+            form label{
+                font-size: large;
+                padding-left: 2%;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">Hackathon Registration</h2>
+        <p>Ticket Price:30DT
+        <p>Included food & Activities</p>
+        <p>Date 📅: 23/24 Mars</p>
+        <center>
+            <button onclick="showPlanning()" class="btn btn-primary mb1 bg-orange">Show Planning</button>
+        </center>
+            <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbyG1q6lGuZl8HGk_E-mltdhbgm0DJ67Man7bVFEwN09OXfYzbya_qu1gh9kKkkCOB9_4w/exec" method="POST">
+                <div class="form-group">
+                    <label  for="fullName">Full Name</label>
+                    <input type="text" class="form-control" name="fullName" required placeholder="ismik kemil">
+                </div>
+                <div class="form-group">
+                    <label  for="age">Age</label>
+                    <input type="number" class="form-control" name="age" min="13" required placeholder="3omrik">
+                </div>
+                <div class="form-group">
+                    <label  for="teamName">Team Name</label>
+                    <input type="text" class="form-control" name="teamName" placeholder="ifm il team if you have one">
+                </div>
+                <div class="form-group">
+                    <label  for="uni">University</label>
+                    <input type="text" class="form-control" name="uni"  placeholder="your school or University kenik ta9ra">
+                </div>
+                <div class="form-group">
+                    <label  for="email">Email</label>
+                    <input type="email" class="form-control" name="email" required placeholder="il email mte3ik">
+                </div>
+                <div class="form-group">
+                    <label  for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" name="phone" pattern="[0-9]{8,}" required placeholder="noumro il tele">
+                </div>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+
+    </div><br><br><br>
+
+    <!-- Include Sweet Alert and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        function showPlanning() {
+            const planning = `Planning:
+            10:30 am - 11:00 am: Check-in
+            11:00 am - 12:00 pm: Opening Ceremony & Introduction to GomyCode Training Center
+            12:00 pm - 12:30 pm: Theme Announcement & Hackathon start
+            12:30 pm - 6:34 pm: Working Session
+            6:34 pm - 7:30 pm: Dinner
+            7:30 pm - 8:30 pm: Free Time
+            8:30 pm - ...`;
+
+            Swal.fire({
+                icon: 'info',
+                title: 'Event Planning',
+                text: planning,
+                confirmButtonText: 'OK'
+            });
+        }
+    </script>
+    
+    <!-- Include Sweet Alert and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Listen for form submission
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            // Display success alert
+            // Display success alert
+            Swal.fire({
+            title: "You are Registered",
+            text:"see you at the event",
+            width: 600,
+            padding: "3em",
+            timer: 5000, // Set timer for 5 seconds
+            color: "#000",
+            background: "#fff",
+            backdrop: `
+                rgba(0,0,123,0.4)
+                url("sparkles-stars.gif")
+                left top
+            `
+            });
+        });
+    </script>
+    
+    <script>
+        // Handle form submission
+        document.querySelector('form').addEventListener('submit', async function(event) {
+          event.preventDefault(); // Prevent default form submission behavior
+
+          // Fetch data from the form
+          const formData = new FormData(this);
+
+          try {
+            // Submit form data to the server
+            const response = await fetch(this.action, {
+              method: 'POST',
+              body: formData
+            });
+
+            // Check if the form submission was successful
+            if (response.ok) {
+              // Clear the form input after successful submission (optional)
+              this.reset();
+              // Reload the page after a successful submission
+              window.location.reload();
+            } else {
+              console.error('Form submission failed:', response.statusText);
+            }
+          } catch (error) {
+            console.error('Error submitting form:', error);
+          }
+        });
+      </script>
+      
+</body>
+</html>
