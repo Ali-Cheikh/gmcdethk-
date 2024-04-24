@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <meta name="title" content="Take a Spot" />
-    <meta name="description" content="Register in the upcoming hackathon organized by gomycode and det" />
+    <meta name="title" content="9ayid bech te5o billet" />
+    <meta name="description" content="sagil bech te5o billet" />
     <link rel="shortcut icon" href="logo.png" type="image/x-icon">
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://silicon-valley-hackathon.netlify.app" />
-    <meta property="og:title" content="Take a Spot" />
-    <meta property="og:description" content="Register in the upcoming hackathon organized by gomycode and det" />
-    <meta property="og:image" content="https://i.postimg.cc/Kv6Twfc5/preview.jpg" />
+    <meta property="og:title" content="9ayid bech te5o billet" />
+    <meta property="og:description" content="sagil bech te5o billet" />
+    <meta property="og:image" content="logo.png" />
     <!-- Twitter -->
-    <meta property="twitter:card" content="https://i.postimg.cc/Kv6Twfc5/preview.jpg" />
+    <meta property="twitter:card" content="logo.png" />
     <meta property="twitter:url" content="https://silicon-valley-hackathon.netlify.app" />
-    <meta property="twitter:title" content="Take a Spot" />
-    <meta property="twitter:description" content="Register in the upcoming hackathon organized by gomycode and det" />
-    <meta property="twitter:image" content="https://i.postimg.cc/Kv6Twfc5/preview.jpg" />
-
+    <meta property="twitter:title" content="9ayid bech te5o billet" />
+    <meta property="twitter:description" content="sagil bech te5o billet" />
+    <meta property="twitter:image" content="logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
     <!-- Bootstrap Library -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://unpkg.com/basscss@7.1.1/css/basscss.min.css" rel="stylesheet">
@@ -27,12 +29,30 @@
     <!-- Custom CSS -->
     <style>
         body {
-            background-color: #E50D36;
-            background-image: url(bg.webp);
+            background-image: url(bg.png);
             background-size: cover;
             background-repeat: no-repeat;
-            background-position-y: center;
-            background-position-x: center;
+            height: 100vh;
+}
+            label{
+                margin-top: 15px;
+                background-color: #AD531C;
+                color: white;
+                padding: 5px;
+                border-radius: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            font-family: "Nova Mono", monospace;
+            font-weight: 400;
+            font-style: normal;
+            }
+        select option{
+            color: rgb(255, 255, 255);
+            background-color: #AD531C;
+            display: block;
+            justify-content: center;
+            align-items: center;
         }
         .container {
             top: 50px;
@@ -44,7 +64,7 @@
             padding: 5%;
             max-width: 700px;
             position: relative;
-            background-color: rgba(255, 0, 0, 0.514);
+            background-color: #f56105b2;
             color: white;
             .mb-4{
                 text-align: center;
@@ -60,18 +80,25 @@
         }
         @media only screen and (max-width: 600px){
             body{
-                background-size: 80%;
-                padding-bottom: 20px;
-                background-position-y: top;
-                background-position-x: center;
-                height: 100vh
+                background-image: url(bg.png);
+            background-size: cover;
+            background-repeat: repeat;
+            height: 70vh;
             }
+            img{
+                width:  100%;
+            }
+            
             .container{
-                background-color: rgba(255, 0, 0, 0.589);
+                top: 0px;
+                background-color: rgba(255, 115, 0, 0.514);
                 color: white;
+                margin: 2%;
+                padding: 5%;
+                width: auto;
                 .mb-4{
                     color: black;
-                    background-color: #ffffff;
+                    background-color: ##AD531C;
                     padding: 5px;
                     border-radius: 20px;
                     text-align: center;
@@ -88,30 +115,25 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h2 class="mb-4">Hackathon Registration</h2>
-        <p>Ticket Price:30DT
-        <p>Included food & Activities</p>
-        <p>Date 📅: 23/24 Mars</p>
-        <center>
-            <button onclick="showPlanning()" class="btn btn-primary mb1 bg-orange">Show Planning</button>
-        </center>
-            <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbyG1q6lGuZl8HGk_E-mltdhbgm0DJ67Man7bVFEwN09OXfYzbya_qu1gh9kKkkCOB9_4w/exec" method="POST">
+            <form id="registrationForm" action="https://script.google.com/macros/s/AKfycbx-rAn9uxHAMlv9_FZMncUKFIm32jI-_zPoCPOLshXG_LmbColZcUkf9UTFDB4VyDBQpA/exec" method="POST">
+                <center>
+                    <img src="logo.png" alt="sd" width="50%">
+                </center>
+                <hr>
                 <div class="form-group">
                     <label  for="fullName">Full Name</label>
-                    <input type="text" class="form-control" name="fullName" required placeholder="ismik kemil">
+                    <input type="text" class="form-control" name="fullName" required placeholder="ismik ou la9bik" required>
                 </div>
                 <div class="form-group">
-                    <label  for="age">Age</label>
-                    <input type="number" class="form-control" name="age" min="13" required placeholder="3omrik">
+                    <label  for="classs">class</label>
+                    <select name="classs" class="form-control" id="">
+                        <option value="">select class</option>
+                            <option value="2eme">2 <sup>eme</sup></option>
+                            <option value="3eme">3 <sup>eme</sup></option>
+                            <option value="4eme">4 <sup>eme</sup></option>
+                    </select>
                 </div>
-                <div class="form-group">
-                    <label  for="teamName">Team Name</label>
-                    <input type="text" class="form-control" name="teamName" placeholder="ifm il team if you have one">
-                </div>
-                <div class="form-group">
-                    <label  for="uni">University</label>
-                    <input type="text" class="form-control" name="uni"  placeholder="your school or University kenik ta9ra">
-                </div>
+
                 <div class="form-group">
                     <label  for="email">Email</label>
                     <input type="email" class="form-control" name="email" required placeholder="il email mte3ik">
@@ -120,32 +142,13 @@
                     <label  for="phone">Phone Number</label>
                     <input type="tel" class="form-control" name="phone" pattern="[0-9]{8,}" required placeholder="noumro il tele">
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <center>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </center>
             </form>
 
     </div><br><br><br>
 
-    <!-- Include Sweet Alert and Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        function showPlanning() {
-            const planning = `Planning:
-            10:30 am - 11:00 am: Check-in
-            11:00 am - 12:00 pm: Opening Ceremony & Introduction to GomyCode Training Center
-            12:00 pm - 12:30 pm: Theme Announcement & Hackathon start
-            12:30 pm - 6:34 pm: Working Session
-            6:34 pm - 7:30 pm: Dinner
-            7:30 pm - 8:30 pm: Free Time
-            8:30 pm - ...`;
-
-            Swal.fire({
-                icon: 'info',
-                title: 'Event Planning',
-                text: planning,
-                confirmButtonText: 'OK'
-            });
-        }
-    </script>
     
     <!-- Include Sweet Alert and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -153,31 +156,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
-        // Listen for form submission
-        document.getElementById('registrationForm').addEventListener('submit', function(event) {
-            // Display success alert
-            Swal.fire({
-            title: "You are Registered",
-            text:"see you at the event",
-            width: 600,
-            padding: "3em",
-            timer: 5000, // Set timer for 5 seconds
-            color: "#000",
-            background: "#fff",
-            backdrop: `
-                rgba(0,0,123,0.4)
-                url("sparkles-stars.gif")
-                left top
-            `
-            });
-        });
-    </script>
-    
-    <script>
         // Handle form submission
         document.querySelector('form').addEventListener('submit', async function(event) {
           event.preventDefault(); // Prevent default form submission behavior
-
+          Swal.fire({
+            title: "Registering",
+            text:"osbor chwaya 😉",
+            showConfirmButton: false,
+            allowOutsideClick: false,
+        });
           // Fetch data from the form
           const formData = new FormData(this);
 
@@ -191,9 +178,21 @@
             // Check if the form submission was successful
             if (response.ok) {
               // Clear the form input after successful submission (optional)
-              this.reset();
-              // Reload the page after a successful submission
-              window.location.reload();
+              Swal.fire({
+            title: "You are Registered",
+            width: 600,
+            padding: "3em",
+            timer: 8000, // Set timer for 5 seconds
+            color: "#000",
+            background: "bg.png",
+            backdrop: `
+                rgba(0,0,123,0.4)
+                url("sparkles-stars.gif")
+                left top
+                no-repeat
+            `
+            });
+            
             } else {
               console.error('Form submission failed:', response.statusText);
             }
